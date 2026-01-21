@@ -1,0 +1,220 @@
+/* Papers Modal Styles */
+
+.papers-modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.papers-modal-content {
+  background-color: #ffffff;
+  margin: 2% auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.papers-modal-header {
+  padding: 24px 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.papers-modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.papers-modal-close {
+  color: white;
+  font-size: 32px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: transform 0.2s;
+  line-height: 1;
+}
+
+.papers-modal-close:hover {
+  transform: scale(1.2);
+}
+
+.papers-count {
+  padding: 16px 32px;
+  background-color: #f8f9fa;
+  color: #6c757d;
+  font-size: 14px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.papers-grid {
+  padding: 24px 32px 32px 32px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.paper-card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.paper-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  border-color: #667eea;
+}
+
+.paper-card-header {
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.paper-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  line-height: 1.4;
+}
+
+.paper-card-body {
+  padding: 20px;
+}
+
+.paper-abstract {
+  margin: 0 0 16px 0;
+  color: #4a5568;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.paper-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.paper-meta-item {
+  font-size: 12px;
+  color: #718096;
+  background: #f7fafc;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.paper-meta-item strong {
+  color: #4a5568;
+  margin-right: 4px;
+}
+
+.paper-card-footer {
+  padding: 16px 20px;
+  background: #f8f9fa;
+  border-radius: 0 0 8px 8px;
+  text-align: right;
+}
+
+.paper-link {
+  display: inline-block;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.paper-link:hover {
+  color: #764ba2;
+  transform: translateX(4px);
+}
+
+/* Scrollbar styling */
+.papers-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.papers-grid::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.papers-grid::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+.papers-grid::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .papers-modal-content {
+    width: 95%;
+    margin: 5% auto;
+  }
+  
+  .papers-modal-header {
+    padding: 20px;
+  }
+  
+  .papers-modal-header h2 {
+    font-size: 20px;
+  }
+  
+  .papers-grid {
+    padding: 16px;
+  }
+  
+  .paper-card-header,
+  .paper-card-body,
+  .paper-card-footer {
+    padding: 16px;
+  }
+  
+  .paper-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

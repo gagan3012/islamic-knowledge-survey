@@ -1,0 +1,1283 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Advances in AI Systems on Islamic Knowledge Capabilities: A Critical Survey</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A comprehensive systematic survey of over 160 papers examining how AI systems operationalize Islamic knowledge, spanning NLP, speech processing, and LLM alignment.">
+        <meta name="keywords" content="Islamic AI, Islamic Knowledge, NLP, Machine Learning, LLM Alignment, Qur'an, Hadith, Fiqh, Islamic Studies, AI Ethics">
+        <meta name="author" content="Islamic Knowledge AI Research Team">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Advances in AI Systems on Islamic Knowledge Capabilities: A Critical Survey">
+        <meta property="og:description" content="A comprehensive systematic survey examining how AI systems operationalize Islamic knowledge across multiple domains.">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="AI Systems on Islamic Knowledge: A Critical Survey">
+        <meta name="twitter:description" content="160+ papers reviewed on Islamic AI systems, from Qur'an NLP to LLM alignment.">
+
+        <link rel="icon" href="assets_common/icons/worldbench-circle.png" type="image/x-icon">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <script src="./static/js/distill_template.v2.js"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://d3js.org/d3-collection.v1.min.js"></script>
+        <script src="https://rawgit.com/nstrayer/slid3r/master/dist/slid3r.js"></script>
+
+        <script defer="" src="./static/js/hider.js"></script>
+        <script src="./static/js/image_interact.js"></script>
+        <script src="./static/js/switch_videos.js"></script>
+        <script defer src="./static/js/taxonomy-tree.js"></script>
+        <script defer src="./static/js/papers-loader.js"></script>
+
+        <link rel="stylesheet" href="./static/css/style.css">
+        <link rel="stylesheet" href="static/css/papers-modal.css">
+        <!-- <link rel="stylesheet" href="./static/css/enhanced-styles.css"> -->
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script>
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>  <!-- jquery -->
+        <script defer src="./static/js/medium-zoom.min.js"></script>
+        <script defer src="./static/js/zoom.js"></script>
+    </head>
+
+
+    <body>
+        <div class="header-wrapper">
+            <div class="header-container" id="header-container">
+                <div class="header-content">
+                <h1>
+                  Advances in AI Systems on Islamic Knowledge Capabilities: A Critical Survey
+                </h1>
+                
+                <p>
+                  A systematic scoping review examining how AI systems operationalize Islamic knowledge across <strong>160+ papers</strong> (2016-2026)
+                </p>
+
+                <!-- <div class="header-stats">
+                  <div class="stat-badge green">
+                    <i class="fas fa-file-alt"></i>
+                    <span>160+ Papers</span>
+                  </div>
+                  <div class="stat-badge blue">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>1994-2025</span>
+                  </div>
+                  <div class="stat-badge gold">
+                    <i class="fas fa-chart-line"></i>
+                    <span>+104% Growth</span>
+                  </div>
+                </div> -->
+
+
+                <div class="button-container">
+                    <a href="#" class="button primary" target="_blank">
+                        <i class="ai ai-arxiv"></i>
+                        <span>arXiv</span>
+                    </a>
+                    <!-- <a href="main.tex" class="button secondary" target="_blank">
+                        <i class="fas fa-file-code"></i>
+                        <span>LaTeX Source</span>
+                    </a> -->
+                    <a href="https://huggingface.co/datasets/QCRI/islamic-knowledge-ai-survey" class="button secondary" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="papers.html" class="button secondary">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Browse Papers</span>
+                    </a>
+                    <!-- <a href="bibliography/bibliography.bib" class="button secondary" target="_blank">
+                        <i class="fas fa-book"></i>
+                        <span>Bibliography</span>
+                    </a> -->
+                </div>
+                </div>
+                <div class="header-image">
+                    <img src="static/images/fig2_temporal_new (1)-1.png" alt="Publication trends showing research growth" class="teaser-image">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <d-article>
+            <!-- <d-contents>
+                <nav class="toc">
+                    <h4>Contents</h4>
+                    <div><a href="#introduction"><i class="fas fa-chevron-right"></i>Introduction</a></div>
+                    <div><a href="#scope"><i class="fas fa-chevron-right"></i>Scope & Method</a></div>
+                    <div><a href="#taxonomy"><i class="fas fa-chevron-right"></i>Taxonomy</a></div>
+                    <div><a href="#resources"><i class="fas fa-chevron-right"></i>Resources & Benchmarks</a></div>
+                    <div><a href="#papers-section"><i class="fas fa-chevron-right"></i>Research Papers</a></div>
+                    <div><a href="#evaluation"><i class="fas fa-chevron-right"></i>Evaluation</a></div>
+                    <div><a href="#challenges"><i class="fas fa-chevron-right"></i>Challenges</a></div>
+                </nav>
+            </d-contents> -->
+
+
+
+            <section id="introduction">
+              <div class="wb-section">
+                <h2 style="font-size:2rem; margin-bottom:1.5rem; color:#1F2937; border-bottom:3px solid #3B82F6; padding-bottom:0.75rem; display:inline-block;">
+                  <i class="fas fa-info-circle" style="color:#3B82F6;"></i> Introduction
+                </h2>
+                <div class="wb-hr"></div>
+
+                <p class="wb-lead">
+                  Islam-related content is growing at an unprecedented pace to address the needs of over 2 billion people worldwide. AI systems are playing an increasingly central role in shaping how this content is accessed, understood, and applied.
+                </p>
+                <p class="wb-lead">
+                  This systematic survey reviews over <strong>160 papers</strong> from the last decade that incorporate Islamic knowledge in ML/AI systems, spanning NLP, IR, speech processing, educational technology, and LLM alignment.
+                </p>
+
+                <figure style="width: 100%; max-width: 900px; display: block; margin: 32px auto;">
+                  <img src="static/images/fig_sunburst_v3.png-1.png" alt="Research landscape sunburst visualization" style="max-width:100%; border-radius:8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" loading="lazy">
+                  <figcaption style="text-align:center; margin-top:10px; color:#666; font-size:0.9em;">A sunburst chart depicting the hierarchical distribution of the surveyed literature across major domains and sub-applications</figcaption>
+                </figure>
+
+                <p class="wb-lead">
+                  We introduce a <strong>multi-dimensional taxonomy</strong> that links normative lenses (Creed/Aqīdah, Jurisprudence/Fiqh, Ethics/Akhlāq, Objectives/Maqāṣid) with content domains spanning Qur'an and Hadith studies, fiqh and fatwa QA, Islamic education, and classical heritage digitization.
+                </p>
+                <p class="wb-lead">
+                  Our goal is to provide a comprehensive view of how current AI systems capture, structure, and evaluate Islamic knowledge—identifying where they resonate with scholarly practice and where they risk flattening diverse traditions and worldviews.
+                </p>
+
+                <h3 style="margin-top:3rem; margin-bottom:1.5rem; text-align:center;"><i class="fas fa-history"></i> Comparison with Prior Surveys</h3>
+                <p class="wb-lead" style="text-align:center;">Prior surveys on Islamic AI systems have focused on specific domains. This survey provides a comprehensive view across all aspects:</p>
+                <div style="overflow-x:auto; margin-top:2rem; margin-bottom:2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius:8px;">
+                  <table style="width:100%; border-collapse: collapse; font-size:0.8em; background:white;">
+                    <thead style="background:#1F2937; color:white;">
+                      <tr>
+                        <th style="padding:10px; text-align:left; border-bottom:2px solid #374151;">Prior Survey</th>
+                        <th style="padding:10px; text-align:center; border-bottom:2px solid #374151;">Year</th>
+                        <th style="padding:10px; text-align:left; border-bottom:2px solid #374151;">Primary Scope</th>
+                        <th style="padding:10px; text-align:left; border-bottom:2px solid #374151;">Main Research Areas</th>
+                        <th style="padding:10px; text-align:center; border-bottom:2px solid #374151;">Prov./Disagr./Abst.</th>
+                        <th style="padding:10px; text-align:center; border-bottom:2px solid #374151;">MM</th>
+                        <th style="padding:10px; text-align:center; border-bottom:2px solid #374151;">Norm./Plur.</th>
+                        <th style="padding:10px; text-align:left; border-bottom:2px solid #374151;">Systematic Method</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr style="background:#F9FAFB;">
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;"><a href="https://doi.org/10.1007/s10462-019-09672-z" target="_blank" style="color:#3B82F6; text-decoration:none;">Azmi (2019)</a></td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">2019</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Hadith-focused</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">IR/ML/DL (pre-LLM)</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">~</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">~</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Narrative (no PRISMA)</td>
+                      </tr>
+                      <tr style="background:#FFFFFF;">
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;"><a href="https://doi.org/10.1016/j.artint.2022.103801" target="_blank" style="color:#3B82F6; text-decoration:none;">Bashir et al. (2023)</a></td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">2023</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Qur'an-focused</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">IR/ML/DL; limited Transformers; pre-LLM/RAG</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">~</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✓</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Inclusion/exclusion + flow</td>
+                      </tr>
+                      <tr style="background:#F9FAFB;">
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;"><a href="https://arxiv.org/abs/2310.07536" target="_blank" style="color:#3B82F6; text-decoration:none;">Alnefaie et al. (2023)</a></td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">2023</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Islamic QA (Qur'an/Hadith/Fatwa)</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Retrieval + PLMs; task framing</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">~</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">~</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Survey + evaluation criteria</td>
+                      </tr>
+                      <tr style="background:#FFFFFF;">
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;"><a href="#" target="_blank" style="color:#3B82F6; text-decoration:none;">Ahmad et al. (2025)</a></td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">2025</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Qur'anic education</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">AI-in-education (systematic review)</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">~</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Systematic review</td>
+                      </tr>
+                      <tr style="background:#F9FAFB;">
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;"><a href="#" target="_blank" style="color:#3B82F6; text-decoration:none;">Hakim et al. (2023)</a></td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">2023</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Teaching Islamic studies</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">AI-in-education (systematic review)</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">~</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Review (PRISMA referenced)</td>
+                      </tr>
+                      <tr style="background:#FFFFFF;">
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;"><a href="#" target="_blank" style="color:#3B82F6; text-decoration:none;">Alhammad et al. (2025)</a></td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">2025</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Islamic education</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Pedagogy + learning outcomes (review)</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">~</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Review</td>
+                      </tr>
+                      <tr style="background:#F9FAFB;">
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;"><a href="https://arxiv.org/abs/2409.00016" target="_blank" style="color:#3B82F6; text-decoration:none;">Mashaabi et al. (2024)</a></td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">2024</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Arabic LLMs (general)</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Transformers/LLMs; resources</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">~</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Method + openness/resources</td>
+                      </tr>
+                      <tr style="background:#FFFFFF;">
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;"><a href="#" target="_blank" style="color:#3B82F6; text-decoration:none;">Rhel et al. (2025)</a></td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">2025</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Arabic LLMs (general)</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">PLMs/LLMs; prompting; evaluation trends</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Review-style</td>
+                      </tr>
+                      <tr style="background:#F9FAFB;">
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;"><a href="#" target="_blank" style="color:#3B82F6; text-decoration:none;">Abouzied et al. (2025)</a></td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">2025</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Arabic LLMs landscape</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">LLMs + benchmarks; harm/bias themes</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">~</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">~</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Landscape (no PRISMA)</td>
+                      </tr>
+                      <tr style="background:#FFFFFF;">
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;"><a href="#" target="_blank" style="color:#3B82F6; text-decoration:none;">Alzubaidi et al. (2025)</a></td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">2025</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Arabic LLM benchmarks</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">LLM evaluation; benchmark taxonomy</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">~</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">~</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Systematic review</td>
+                      </tr>
+                      <tr style="background:#F9FAFB;">
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;"><a href="#" target="_blank" style="color:#3B82F6; text-decoration:none;">Asseri et al. (2025)</a></td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">2025</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Bias (Arabs/Muslims)</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">Prompting/pipelines; bias measurement</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✗</td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #E5E7EB;">✓</td>
+                        <td style="padding:8px; border-bottom:1px solid #E5E7EB;">PRISMA</td>
+                      </tr>
+                      <tr style="background:#DBEAFE; border:2px solid #3B82F6;">
+                        <td style="padding:8px; border-bottom:1px solid #3B82F6;"><strong>This Survey (2026)</strong></td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #3B82F6;"><strong>2026</strong></td>
+                        <td style="padding:8px; border-bottom:1px solid #3B82F6;"><strong>Whole Islamic stack</strong></td>
+                        <td style="padding:8px; border-bottom:1px solid #3B82F6;"><strong>IR, Transformers, LLM/RAG/agents; end-to-end evaluation</strong></td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #3B82F6;"><strong>✓</strong></td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #3B82F6;"><strong>✓</strong></td>
+                        <td style="padding:8px; text-align:center; border-bottom:1px solid #3B82F6;"><strong>✓</strong></td>
+                        <td style="padding:8px; border-bottom:1px solid #3B82F6;"><strong>PRISMA-ScR + reproducibility artifacts</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p style="margin-top:1rem; font-size:0.9em; color:#6B7280;">
+                  <i class="fas fa-info-circle"></i> <strong>Legend:</strong> ✓ = explicit focus; ~ = partial/implicit; ✗ = not covered. MM = multimodal; Norm./Plur. = normative/pluralism considerations; Prov./Disagr./Abst. = provenance/disagreement/abstention.
+                </p>
+
+                <br><br>
+              </div>
+            </section>
+
+
+
+
+            <section id="scope">
+              <h2 style="font-size:2rem; margin-bottom:1.5rem; color:#1F2937; border-bottom:3px solid #10B981; padding-bottom:0.75rem; display:inline-block;">
+                <i class="fas fa-search" style="color:#10B981;"></i> Scope & Methodology
+              </h2>
+
+              <style>
+                #scope .wb-grid{
+                  grid-template-columns: 1fr 1fr !important;
+                  max-width: 1100px;
+                  margin: 0 auto;
+                  gap: 1.5rem;
+                }
+                @media (max-width: 768px) {
+                  #scope .wb-grid{
+                    grid-template-columns: 1fr !important;
+                  }
+                }
+              </style>
+
+              <div class="wb-section">
+                <p class="wb-lead">
+                  To ensure a systematic, transparent, and reproducible review, we followed the <strong>PRISMA-ScR framework</strong>. This approach allowed us to rigorously map the rapidly evolving research landscape while minimizing selection bias.
+                </p>
+
+                <figure style="width: 100%; max-width: 900px; display: block; margin: 32px auto;">
+                  <img src="static/images/qcri project-prisma.drawio-1.png" alt="PRISMA Flow Diagram" style="max-width:100%; border-radius:8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" loading="lazy">
+                  <figcaption style="text-align:center; margin-top:10px; color:#666; font-size:0.9em;">PRISMA flow diagram showing the systematic screening process from 1,743 records to 160 included papers</figcaption>
+                </figure>
+
+        
+
+                <h3 style="margin-top:2rem;">Research Questions</h3>
+                <div class="wb-grid">
+                  <article class="wb-card">
+                    <h4><strong>RQ1:</strong> Domains & Tasks</h4>
+                    <p>What Islamic knowledge domains and application tasks have been operationalized in ML/AI systems, and how is this work distributed across subfields?</p>
+                  </article>
+
+                  <article class="wb-card">
+                    <h4><strong>RQ2:</strong> Resources & Measurement</h4>
+                    <p>What datasets, benchmarks, and knowledge resources are available, and what assumptions do they encode about evidence, provenance, and interpretive diversity?</p>
+                  </article>
+
+                  <article class="wb-card">
+                    <h4><strong>RQ3:</strong> Evaluation & Trustworthiness</h4>
+                    <p>How do studies evaluate trustworthiness, especially source faithfulness, doctrinal correctness, pluralism-aware answering, and safety/bias?</p>
+                  </article>
+
+                  <article class="wb-card">
+                    <h4><strong>Coverage:</strong> 1994-2025</h4>
+                    <p>Systematic search across Semantic Scholar, IEEE Xplore, ACM Digital Library, ACL Anthology, and arXiv. Initial corpus: 1,743 papers → 160 included after screening.</p>
+                  </article>
+                </div>
+              </div>
+              <br><br>
+            </section>
+
+
+
+
+
+
+            <section id="taxonomy">
+              <h2 style="font-size:2rem; margin-bottom:1.5rem; color:#1F2937; border-bottom:3px solid #F59E0B; padding-bottom:0.75rem; display:inline-block;">
+                <i class="fas fa-sitemap" style="color:#F59E0B;"></i> Multi-Dimensional Taxonomy
+              </h2>
+              <div class="wb-section">
+                <p class="wb-lead">
+                  We developed a comprehensive taxonomy that bridges traditional Islamic sciences with modern LLM evaluation. This framework links knowledge domains, computational task families, and cross-cutting normative lenses.
+                </p>
+                
+                <h3 style="margin-top:2rem; margin-bottom:1rem; text-align:center;">
+                  <i class="fas fa-project-diagram"></i> Interactive Survey Organization & Taxonomy Framework
+                </h3>
+                <p style="text-align:center; color:#6B7280; margin-bottom:1.5rem;">
+                  Hover over nodes to explore the hierarchical structure of Islamic AI research domains
+                </p>
+                
+                <!-- Interactive D3.js Taxonomy Tree -->
+                <div id="taxonomy-tree-container"></div>
+                
+                <div class="taxonomy-caption">
+                  <i class="fas fa-sitemap"></i> <strong>Figure:</strong> Taxonomy of Islamic-knowledge AI work organized by content domains (sources and practice areas) and task families; Maqasid is represented as a cross-cutting objectives/safety/governance lens.
+                </div>
+                
+                <style>
+                  .taxonomy-container {
+                    max-width: 1400px;
+                    margin: 2rem auto;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                  }
+                  .taxonomy-stream {
+                    background: white;
+                    border-radius: 12px;
+                    padding: 1.5rem;
+                    margin-bottom: 1.5rem;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                    border-left: 5px solid;
+                  }
+                  .stream-scriptural { border-left-color: #10B981; }
+                  .stream-law { border-left-color: #3B82F6; }
+                  .stream-history { border-left-color: #F59E0B; }
+                  .stream-education { border-left-color: #8B5CF6; }
+                  .stream-governance { border-left-color: #EF4444; }
+                  .stream-resources { border-left-color: #6B7280; }
+                  
+                  .stream-title {
+                    font-size: 1.3em;
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                  }
+                  .stream-domains {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 1rem;
+                  }
+                  .domain-card {
+                    background: #F9FAFB;
+                    border-radius: 8px;
+                    padding: 1rem;
+                    border: 1px solid #E5E7EB;
+                  }
+                  .domain-title {
+                    font-weight: 600;
+                    font-size: 1.05em;
+                    margin-bottom: 0.75rem;
+                    color: #1F2937;
+                  }
+                  .topic-group {
+                    margin-bottom: 0.75rem;
+                  }
+                  .topic-name {
+                    font-weight: 500;
+                    font-size: 0.95em;
+                    color: #374151;
+                    margin-bottom: 0.25rem;
+                  }
+                  .leaf-items {
+                    font-size: 0.85em;
+                    color: #6B7280;
+                    padding-left: 1rem;
+                    line-height: 1.5;
+                  }
+                  .tree-root {
+                    background: linear-gradient(135deg, #6B7280 0%, #4B5563 100%);
+                    color: white;
+                    padding: 1rem 1.5rem;
+                    border-radius: 8px;
+                    text-align: center;
+                    font-size: 1.1em;
+                    font-weight: 700;
+                    display: block;
+                    max-width: 250px;
+                    margin: 0 auto 2.5rem auto;
+                    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
+                  }
+                  .tree-structure {
+                    display: flex;
+                    gap: 1.5rem;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                  }
+                  .tree-branch {
+                    flex: 1;
+                    min-width: 300px;
+                    max-width: 380px;
+                  }
+                  .branch-header {
+                    padding: 0.9rem 1.2rem;
+                    border-radius: 8px;
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 0.95em;
+                    margin-bottom: 1rem;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                  }
+                  .branch-lavender .branch-header {
+                    background: linear-gradient(135deg, #E9D5FF 0%, #D8B4FE 100%);
+                    color: #581C87;
+                  }
+                  .branch-coral .branch-header {
+                    background: linear-gradient(135deg, #FECACA 0%, #FCA5A5 100%);
+                    color: #7F1D1D;
+                  }
+                  .branch-cyan .branch-header {
+                    background: linear-gradient(135deg, #CFFAFE 0%, #A5F3FC 100%);
+                    color: #164E63;
+                  }
+                  .tree-node {
+                    background: white;
+                    border: 1px solid #E5E7EB;
+                    border-radius: 6px;
+                    padding: 0.8rem;
+                    margin-bottom: 0.8rem;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                  }
+                  .node-title {
+                    font-weight: 600;
+                    font-size: 0.9em;
+                    margin-bottom: 0.5rem;
+                    padding-bottom: 0.4rem;
+                    border-bottom: 2px solid #E5E7EB;
+                  }
+                  .branch-lavender .node-title {
+                    color: #6B21A8;
+                  }
+                  .branch-coral .node-title {
+                    color: #991B1B;
+                  }
+                  .branch-cyan .node-title {
+                    color: #155E75;
+                  }
+                  .node-content {
+                    font-size: 0.8em;
+                    line-height: 1.6;
+                    color: #4B5563;
+                  }
+                  .node-light {
+                    background: #FAFAFA;
+                  }
+                  .branch-lavender .node-light {
+                    background: #FAF5FF;
+                  }
+                  .branch-coral .node-light {
+                    background: #FEF2F2;
+                  }
+                  .branch-cyan .node-light {
+                    background: #F0FDFA;
+                  }
+                  @media (max-width: 1024px) {
+                    .tree-structure {
+                      flex-direction: column;
+                      align-items: center;
+                    }
+                    .tree-branch {
+                      max-width: 100%;
+                      width: 100%;
+                    }
+                  }
+                  /* Hide old static taxonomy - now using D3.js visualization */
+                  .taxonomy-container {
+                    display: none !important;
+                  }
+                </style>
+
+        
+
+
+            <div class="wb-kicker"><span class="icon is-small">
+                  <i class="fas fa-database"></i>
+                </span>&nbsp;Use Cases & Applications</div>
+            <div class="wb-hr" style="margin-bottom:1.25rem;"></div>
+
+            <section id="use-cases" style="margin:3.5rem 0;">
+              <div class="wb-section">
+
+                <p class="wb-lead">
+                  Islamic-knowledge AI is deployed in recurring settings that stress different reliability constraints:
+                </p>
+
+                <div style="
+                  display:grid;
+                  grid-template-columns:repeat(2, minmax(0, 1fr));
+                  gap:1.6rem 1.8rem;
+                  margin-top:2rem;">
+
+                  <!-- Scripture QA -->
+                  <article style="
+                    background:linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+                    border-left:4px solid #4F46E5;
+                    padding:1.5rem;
+                    border-radius:8px;">
+                    <h3 style="margin:0 0 0.75rem; color:#312E81; font-size:1.15rem;">
+                      <i class="fas fa-book-quran" style="margin-right:0.5rem;"></i>Scripture-Grounded QA
+                    </h3>
+                    <p style="margin:0.5rem 0; color:#4338CA;">
+                      <strong>Focus:</strong> Qur'an/Hadith search, reference assistants
+                    </p>
+                    <p style="margin:0.5rem 0; font-size:0.95rem; line-height:1.6;">
+                      <strong>Key risks:</strong> Provenance breakage, source fabrication, citation hallucination
+                    </p>
+                    <p style="margin:0.5rem 0; font-size:0.95rem; line-height:1.6;">
+                      <strong>Requirements:</strong> Source faithfulness, verifiable attribution
+                    </p>
+                  </article>
+
+                  <!-- Fiqh/Fatwa -->
+                  <article style="
+                    background:linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+                    border-left:4px solid #059669;
+                    padding:1.5rem;
+                    border-radius:8px;">
+                    <h3 style="margin:0 0 0.75rem; color:#064E3B; font-size:1.15rem;">
+                      <i class="fas fa-gavel" style="margin-right:0.5rem;"></i>Fiqh & Fatwa Systems
+                    </h3>
+                    <p style="margin:0.5rem 0; color:#047857;">
+                      <strong>Focus:</strong> Jurisprudential reasoning, school-aware rulings
+                    </p>
+                    <p style="margin:0.5rem 0; font-size:0.95rem; line-height:1.6;">
+                      <strong>Key risks:</strong> Collapsing legitimate disagreement (ikhtilāf), underspecified answers
+                    </p>
+                    <p style="margin:0.5rem 0; font-size:0.95rem; line-height:1.6;">
+                      <strong>Requirements:</strong> Multi-school awareness, qualified responses, abstention policies
+                    </p>
+                  </article>
+
+                  <!-- Practice Support -->
+                  <article style="
+                    background:linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+                    border-left:4px solid #D97706;
+                    padding:1.5rem;
+                    border-radius:8px;">
+                    <h3 style="margin:0 0 0.75rem; color:#78350F; font-size:1.15rem;">
+                      <i class="fas fa-praying-hands" style="margin-right:0.5rem;"></i>Practice Support
+                    </h3>
+                    <p style="margin:0.5rem 0; color:#92400E;">
+                      <strong>Focus:</strong> Hajj/Umrah guidance, prayer times, rituals
+                    </p>
+                    <p style="margin:0.5rem 0; font-size:0.95rem; line-height:1.6;">
+                      <strong>Key risks:</strong> Operational errors in high-stakes contexts
+                    </p>
+                    <p style="margin:0.5rem 0; font-size:0.95rem; line-height:1.6;">
+                      <strong>Requirements:</strong> Conservative abstention, traceable sourcing, clear disclaimers
+                    </p>
+                  </article>
+
+                  <!-- Multimodal -->
+                  <article style="
+                    background:linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%);
+                    border-left:4px solid #DC2626;
+                    padding:1.5rem;
+                    border-radius:8px;">
+                    <h3 style="margin:0 0 0.75rem; color:#7F1D1D; font-size:1.15rem;">
+                      <i class="fas fa-microphone-alt" style="margin-right:0.5rem;"></i>Multimodal Learning
+                    </h3>
+                    <p style="margin:0.5rem 0; color:#991B1B;">
+                      <strong>Focus:</strong> Recitation coaching, tajwīd feedback, OCR
+                    </p>
+                    <p style="margin:0.5rem 0; font-size:0.95rem; line-height:1.6;">
+                      <strong>Key risks:</strong> Pronunciation errors, incorrect tajwīd rules
+                    </p>
+                    <p style="margin:0.5rem 0; font-size:0.95rem; line-height:1.6;">
+                      <strong>Requirements:</strong> Robust speech pipelines, expert validation
+                    </p>
+                  </article>
+
+                </div>
+                <br>
+
+                <p class="wb-lead">
+                  These use cases highlight the diversity of deployment contexts and the varying trustworthiness requirements across Islamic-knowledge AI applications.
+                </p>
+
+              </div>
+              <br>
+            </section>
+
+
+
+            <section id="resources">
+                <h2><i class="fas fa-database"></i> Resources & Benchmarks</h2>
+                
+                <div class="wb-section">
+                  <p class="wb-lead">
+                    Islamic alignment requires structured corpora spanning primary texts, classical scholarship, contemporary legal resolutions, linguistic resources, and benchmark datasets. We organize these into five major categories:
+                  </p>
+
+                  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; margin-top:2rem;">
+                    
+                    <article class="wb-card" style="border-left: 4px solid #6366F1;">
+                      <h3><i class="fas fa-book-open" style="color:#6366F1;"></i> Primary Sources</h3>
+                      <p><strong>Qur'an:</strong> Tanzil, Quranic Arabic Corpus</p>
+                      <p><strong>Hadith:</strong> Kutub al-Sittah (Six Books), authenticated collections</p>
+                      <p><strong>Key features:</strong> Canonical texts, linguistic annotation, chain of narration</p>
+                    </article>
+
+                    <article class="wb-card" style="border-left: 4px solid #10B981;">
+                      <h3><i class="fas fa-scroll" style="color:#10B981;"></i> Classical Heritage</h3>
+                      <p><strong>Content:</strong> Uṣūl al-Fiqh, legal maxims, Maqāṣid texts</p>
+                      <p><strong>Examples:</strong> al-Ghazālī's works, al-Shāṭibī's al-Muwāfaqāt</p>
+                      <p><strong>Resources:</strong> OpenITI, digitized libraries</p>
+                    </article>
+
+                    <article class="wb-card" style="border-left: 4px solid #F59E0B;">
+                      <h3><i class="fas fa-gavel" style="color:#F59E0B;"></i> Contemporary Fatwas</h3>
+                      <p><strong>Sources:</strong> IIFA, ECFR, MWL Fiqh Council, AMJA</p>
+                      <p><strong>Topics:</strong> Finance, bioethics, minority jurisprudence</p>
+                      <p><strong>Purpose:</strong> Connect classical principles to modern issues</p>
+                    </article>
+
+                    <article class="wb-card" style="border-left: 4px solid #EF4444;">
+                      <h3><i class="fas fa-language" style="color:#EF4444;"></i> Linguistic Resources</h3>
+                      <p><strong>Tools:</strong> Arabic morphological analyzers, embeddings</p>
+                      <p><strong>Data:</strong> Quranic Arabic Corpus, narrator databases</p>
+                      <p><strong>Models:</strong> AraBERT, CAMeLBERT, specialized embeddings</p>
+                    </article>
+
+                    <article class="wb-card" style="border-left: 4px solid #8B5CF6;">
+                      <h3><i class="fas fa-tasks" style="color:#8B5CF6;"></i> Benchmarks & Shared Tasks</h3>
+                      <p><strong>Datasets:</strong> QIAS, IslamicEval, PalmX, FiqhQA</p>
+                      <p><strong>Multimodal:</strong> Iqra'Eval (recitation), AraHalluEval</p>
+                      <p><strong>Focus:</strong> Correctness, faithfulness, safety</p>
+                    </article>
+
+                  </div>
+
+                  <br>
+                  <div style="background:#FEF3C7; border-left:4px solid #F59E0B; padding:1.5rem; border-radius:8px; margin-top:2rem; box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);">
+                    <h4 style="margin-top:0; color:#92400E;"><i class="fas fa-exclamation-triangle"></i> Data Challenges</h4>
+                    <p style="margin-bottom:0.5rem;">Key issues in Islamic knowledge data resources:</p>
+                    <ul style="margin:0; padding-left:1.5rem;">
+                      <li><strong>Scarcity:</strong> Limited high-quality annotated datasets</li>
+                      <li><strong>Quality control:</strong> Web scrapes may mix authoritative sources with sectarian content</li>
+                      <li><strong>Multi-school coverage:</strong> Need for balanced representation across Sunni, Shia, and other interpretations</li>
+                      <li><strong>Language diversity:</strong> Most resources are Arabic-centric; need for multilingual coverage</li>
+                    </ul>
+                  </div>
+
+                  <br>
+                  <h3 style="margin-top:3rem; margin-bottom:1rem; text-align:center;"><i class="fas fa-table"></i> Key Datasets & Benchmarks</h3>
+                  <p style="text-align:center; color:#6B7280; margin-bottom:2rem;">Overview of resources related to Islamic AI, categorized by Classical Pre-training Corpora, Knowledge Bases (KB) for Retrieval, and Benchmarks</p>
+                  <div style="overflow-x:auto; margin-top:1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius:8px;">
+                    <table style="width:100%; border-collapse: collapse; font-size:0.85em; background:white;">
+                      <thead style="background:#F3F4F6;">
+                        <tr>
+                          <th style="padding:10px; text-align:left; border-bottom:2px solid #E5E7EB; font-weight:600;">Dataset</th>
+                          <th style="padding:10px; text-align:left; border-bottom:2px solid #E5E7EB; font-weight:600;">Description</th>
+                          <th style="padding:10px; text-align:center; border-bottom:2px solid #E5E7EB; font-weight:600;">Type</th>
+                          <th style="padding:10px; text-align:left; border-bottom:2px solid #E5E7EB; font-weight:600;">Size</th>
+                          <th style="padding:10px; text-align:center; border-bottom:2px solid #E5E7EB; font-weight:600;">License</th>
+                          <th style="padding:10px; text-align:center; border-bottom:2px solid #E5E7EB; font-weight:600;">Lang</th>
+                          <th style="padding:10px; text-align:center; border-bottom:2px solid #E5E7EB; font-weight:600;">Ref.</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Classical Pre-training Corpora (Turath) -->
+                        <tr style="background:#EEF2FF;">
+                          <td colspan="7" style="padding:10px; text-align:center; font-weight:bold; font-style:italic; border-bottom:1px solid #E5E7EB;">Classical Pre-training Corpora (Turath)</td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>OpenITI</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">The largest machine-readable corpus of pre-modern Islamicate texts.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Corpus</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">~1B tokens</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">CC-BY-4.0</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar/Per</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="https://www.semanticscholar.org/paper/e5bdc7c06581bbc5871432f95a9036850c541dc1" target="_blank" style="color:#3B82F6; text-decoration:none;">[1]</a></td>
+                        </tr>
+                        <tr style="background:#F9FAFB;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>Shamela (Cleaned)</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Text version of Shamela library; covers Fiqh, Tafsir, and History.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Corpus</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">~1B Tokens</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Public</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[2]</a></td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>KSUCCA</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">King Saud Univ. Corpus of Classical Arabic (7th–11th Century CE).</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Corpus</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">50M Tokens</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Research</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar (Cls)</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[3]</a></td>
+                        </tr>
+                        <tr style="background:#F9FAFB;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>Tashkeela</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Fully vocalized classical texts for training diacritic-aware models.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Corpus</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">75M Tokens</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Public</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[4]</a></td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>Noor Corpus</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Massive diverse library of Islamic PDFs and OCR'd texts.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Corpus</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">>100k Books</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Mixed</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[5]</a></td>
+                        </tr>
+
+                        <!-- Knowledge Bases & Ontologies -->
+                        <tr style="background:#EEF2FF;">
+                          <td colspan="7" style="padding:10px; text-align:center; font-weight:bold; font-style:italic; border-bottom:1px solid #E5E7EB;">Knowledge Bases & Ontologies</td>
+                        </tr>
+                        <tr style="background:#F9FAFB;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>QuranMorph Corpus</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Morphologically annotated Quranic corpus with POS, Lemmatization, etc.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">KB</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">77k Tokens</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">CC-BY-4.0</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar/En</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="https://arxiv.org/pdf/2506.18148" target="_blank" style="color:#3B82F6; text-decoration:none;">[6]</a></td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>Quranic Arabic Corpus</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Morphological and syntactic ontology mapping concepts in the Quran.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">KB/Onto</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">77k nodes</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Research</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar/En</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[7]</a></td>
+                        </tr>
+                        <tr style="background:#F9FAFB;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>IslamicPCQA KB</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Curated knowledge base of 1M+ Islamic documents for retrieval.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">KB</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">1M+ Docs</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Research</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Fa/Ar</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[8]</a></td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>Sunnah.com API</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Structured Hadith collections with grading (Sahih/Hasan) metadata.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">API/KB</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">6 Major Books</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Open</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar/En</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[9]</a></td>
+                        </tr>
+
+                        <!-- Quranic & Hadith Resources -->
+                        <tr style="background:#EEF2FF;">
+                          <td colspan="7" style="padding:10px; text-align:center; font-weight:bold; font-style:italic; border-bottom:1px solid #E5E7EB;">Quranic & Hadith Resources</td>
+                        </tr>
+                        <tr style="background:#F9FAFB;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>IslamicEval 2025</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Hallucination detection-Quran/Hadith.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Hallu</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">1,506 Questions</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Apache 2.0</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="https://aclanthology.org/2025.arabicnlp-1.56/" target="_blank" style="color:#3B82F6; text-decoration:none;">[10]</a></td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>Iqra'Eval 2025</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Quranic mispronunciation diagnosis.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Audio</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">82+ Hours</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Research</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[11]</a></td>
+                        </tr>
+                        <tr style="background:#F9FAFB;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>Sanadset 650K</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Hadith dataset with narrator-chain (Sanad).</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Corpus</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">650,986 Records</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">CC-BY-4.0</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[12]</a></td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>QURAN-MD</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Unified verse-level text, translation, transliteration, and 32 reciters.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Multi</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">6,236 Verses</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Research</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar/En</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[13]</a></td>
+                        </tr>
+
+                        <!-- Jurisprudence (Fiqh) & Reasoning -->
+                        <tr style="background:#EEF2FF;">
+                          <td colspan="7" style="padding:10px; text-align:center; font-weight:bold; font-style:italic; border-bottom:1px solid #E5E7EB;">Jurisprudence (Fiqh) & Reasoning</td>
+                        </tr>
+                        <tr style="background:#F9FAFB;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>QIAS 2025</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Inheritance & general knowledge.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Reason</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">22,000 MCQs</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Research</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="https://aclanthology.org/2025.arabicnlp-1.100/" target="_blank" style="color:#3B82F6; text-decoration:none;">[14]</a></td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>FiqhQA</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">QA by 4 Sunni schools; abstention eval.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">QA</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">960 QAs</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Research</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar/En</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[15]</a></td>
+                        </tr>
+                        <tr style="background:#F9FAFB;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>IslamicPCQA</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">QA with 1M+ doc knowledge base.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">QA/RAG</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">12k Pairs</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Research</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Fa</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[16]</a></td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>Hajj-FQA</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Specialized QA for Hajj rituals/fatwas.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">QA</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">886 Hajj-fatwas</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Research</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[17]</a></td>
+                        </tr>
+
+                        <!-- Cultural & Ethical Alignment -->
+                        <tr style="background:#EEF2FF;">
+                          <td colspan="7" style="padding:10px; text-align:center; font-weight:bold; font-style:italic; border-bottom:1px solid #E5E7EB;">Cultural & Ethical Alignment</td>
+                        </tr>
+                        <tr style="background:#F9FAFB;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>PalmX 2025</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">General Arabic & Islamic Culture.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Culture</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">6.4k MCQs</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Shared Task</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[18]</a></td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>BengaliMoralBench</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Moral reasoning-Bengali Islamic culture.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ethics</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">3k Scenarios</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">CC-BY-NC-ND</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Bn</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[19]</a></td>
+                        </tr>
+                        <tr style="background:#F9FAFB;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>IslamTrust</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Alignment benchmark with consensus-based Islamic ethical principles.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ethics</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Multi</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Research</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar/En</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[20]</a></td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;"><strong>ADAB</strong></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">App reviews corpus annotated for politeness and religious etiquette.</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Style</td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB;">Curated</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Research</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;">Ar</td>
+                          <td style="padding:10px; text-align:center; border-bottom:1px solid #E5E7EB;"><a href="#" style="color:#3B82F6; text-decoration:none;">[21]</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p style="margin-top:1rem; font-size:0.85em; color:#6B7280; line-height:1.6;">
+                    <strong>Note:</strong> <strong>QA</strong>=Question Answering, <strong>Reason</strong>=Reasoning/Math, <strong>Hallu</strong>=Hallucination Detection, <strong>Audio</strong>=Speech/Recitation, <strong>KB</strong>=Knowledge Base, <strong>Multi</strong>=Multimodal
+                  </p>
+                </div>
+                <br><br>
+            </section>
+
+
+            <section id="evaluation">
+                <h2><i class="fas fa-check-circle"></i> Evaluation & Trustworthiness</h2>
+                
+                <div class="wb-section">
+                  <p class="wb-lead">
+                    Evaluation of Islamic-domain LLMs cannot be reduced to generic NLP benchmarks. The core question is not fluency but whether a system is safe and warranted: does it ground claims in authoritative evidence, preserve provenance, and refrain when evidence is missing or contested?
+                  </p>
+
+                  <h3 style="margin-top:3rem; margin-bottom:1rem; text-align:center;"><i class="fas fa-check-square"></i> Evaluation Methodologies</h3>
+                  <p style="text-align:center; color:#6B7280; margin-bottom:2rem;">Comprehensive evaluation framework for Islamic AI systems across four primary domains</p>
+                  
+                  <div style="overflow-x:auto; margin-top:1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius:8px;">
+                    <table style="width:100%; border-collapse: collapse; font-size:0.85em; background:white;">
+                      <thead style="background:#F3F4F6;">
+                        <tr>
+                          <th style="padding:10px; text-align:left; border-bottom:2px solid #E5E7EB; font-weight:600; width:20%;">Methodology</th>
+                          <th style="padding:10px; text-align:left; border-bottom:2px solid #E5E7EB; font-weight:600; width:35%;">Metrics & Description</th>
+                          <th style="padding:10px; text-align:left; border-bottom:2px solid #E5E7EB; font-weight:600; width:27%;">Key Benchmarks</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Linguistic & Reasoning Capabilities -->
+                        <tr style="background:#EEF2FF;">
+                          <td colspan="4" style="padding:10px; text-align:center; font-weight:bold; font-style:italic; border-bottom:1px solid #E5E7EB; color:#312E81;">
+                            <i class="fas fa-brain"></i> Linguistic & Reasoning Capabilities
+                          </td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;"><em>N-gram Matching</em></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            <strong>BLEU, ROUGE, METEOR:</strong> Measures lexical overlap with reference text. Limited utility for theological nuance.
+                          </td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            OALL <a href="#" style="color:#3B82F6;">[22]</a>, AraGen <a href="#" style="color:#3B82F6;">[23]</a>
+                          </td>
+                        </tr>
+                        <tr style="background:#F9FAFB;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;"><em>Symbolic Verification</em></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            <strong>Execution Accuracy:</strong> Validates mathematical derivations (e.g., inheritance shares) against rule-based engines.
+                          </td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            QIAS <a href="https://aclanthology.org/2025.arabicnlp-1.100/" target="_blank" style="color:#3B82F6;">[14]</a>, GATMath <a href="#" style="color:#3B82F6;">[24]</a>
+                          </td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;"><em>Standardized Testing</em></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            <strong>Normalized Accuracy:</strong> Performance on multiple-choice questions (MCQs) across diverse subjects (STEM, Humanities).
+                          </td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            ArabicMMLU <a href="#" style="color:#3B82F6;">[25]</a>, QuranBench <a href="#" style="color:#3B82F6;">[26]</a>
+                          </td>
+                        </tr>
+
+                        <!-- Retrieval & Grounding (RAG) -->
+                        <tr style="background:#EEF2FF;">
+                          <td colspan="4" style="padding:10px; text-align:center; font-weight:bold; font-style:italic; border-bottom:1px solid #E5E7EB; color:#064E3B;">
+                            <i class="fas fa-link"></i> Retrieval & Grounding (RAG)
+                          </td>
+                        </tr>
+                        <tr style="background:#F9FAFB;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;"><em>Factuality Checking</em></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            <strong>Span-Level Error Rate:</strong> Percentage of generated text spans containing fabricated content.
+                          </td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            Halwasa <a href="#" style="color:#3B82F6;">[27]</a>, HalluVerse <a href="#" style="color:#3B82F6;">[28]</a>
+                          </td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;"><em>Citation Verification</em></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            <strong>Citation Precision/Recall:</strong> Accuracy of retrieving specific Qur'anic Ayahs or Hadith to support a claim.
+                          </td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            IslamicEval <a href="https://aclanthology.org/2025.arabicnlp-1.56/" target="_blank" style="color:#3B82F6;">[10]</a>, Hajj-FQA <a href="#" style="color:#3B82F6;">[17]</a>
+                          </td>
+                        </tr>
+                        <tr style="background:#F9FAFB;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;"><em>Entailment</em></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            <strong>Faithfulness Score:</strong> Measures if the generated answer is logically entailed by the retrieved context.
+                          </td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            FARSIQA <a href="#" style="color:#3B82F6;">[16]</a>, AraHalluEval <a href="#" style="color:#3B82F6;">[29]</a>
+                          </td>
+                        </tr>
+
+                        <!-- Doctrinal & Cultural Alignment -->
+                        <tr style="background:#EEF2FF;">
+                          <td colspan="4" style="padding:10px; text-align:center; font-weight:bold; font-style:italic; border-bottom:1px solid #E5E7EB; color:#78350F;">
+                            <i class="fas fa-book"></i> Doctrinal & Cultural Alignment
+                          </td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;"><em>Scholar-in-the-Loop</em></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            <strong>Adjudication Score:</strong> Human expert evaluation of <em>Fatwa</em> correctness, <em>Adab</em> (etiquette), and <em>Hikmah</em> (wisdom).
+                          </td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            FiqhQA <a href="#" style="color:#3B82F6;">[15]</a>, Iqra'Eval <a href="#" style="color:#3B82F6;">[11]</a>, ADAB <a href="#" style="color:#3B82F6;">[21]</a>
+                          </td>
+                        </tr>
+                        <tr style="background:#F9FAFB;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;"><em>Cultural Probing</em></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            <strong>Alignment Score:</strong> Degree of conformity to Arab-Islamic norms vs. Western-centric values.
+                          </td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            IslamTrust <a href="#" style="color:#3B82F6;">[20]</a>, PalmX <a href="#" style="color:#3B82F6;">[18]</a>
+                          </td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;"><em>Dialectal Robustness</em></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            <strong>Dialectal Accuracy:</strong> Performance consistency across Modern Standard Arabic (MSA) and regional dialects.
+                          </td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            AraDiCE <a href="#" style="color:#3B82F6;">[30]</a>, Absher <a href="#" style="color:#3B82F6;">[31]</a>
+                          </td>
+                        </tr>
+
+                        <!-- Safety & Governance -->
+                        <tr style="background:#EEF2FF;">
+                          <td colspan="4" style="padding:10px; text-align:center; font-weight:bold; font-style:italic; border-bottom:1px solid #E5E7EB; color:#7F1D1D;">
+                            <i class="fas fa-shield-alt"></i> Safety & Governance
+                          </td>
+                        </tr>
+                        <tr style="background:#F9FAFB;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;"><em>Red Teaming</em></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            <strong>Attack Success Rate (ASR):</strong> Vulnerability to prompt injection or generating prohibited content (e.g., hate speech).
+                          </td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            ASAS <a href="#" style="color:#3B82F6;">[32]</a>, AraTrust <a href="#" style="color:#3B82F6;">[33]</a>
+                          </td>
+                        </tr>
+                        <tr style="background:#FFFFFF;">
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;"><em>Mechanistic Analysis</em></td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            <strong>Latent Activation:</strong> Identification of internal neuronal pathways associated with bias or violence.
+                          </td>
+                          <td style="padding:10px; border-bottom:1px solid #E5E7EB; vertical-align:top;">
+                            Simbeck et al. <a href="#" style="color:#3B82F6;">[34]</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <p style="margin-top:1rem; font-size:0.85em; color:#6B7280; line-height:1.6;">
+                    <strong>Note:</strong> Evaluation methodologies categorized into four primary domains: general capabilities, retrieval & grounding, doctrinal faithfulness, and safety & ethics. Each methodology includes specific metrics and corresponding benchmarks for comprehensive assessment.
+                  </p>
+
+                  <div style="background:#DBEAFE; border-left:4px solid #3B82F6; padding:1.5rem; border-radius:8px; margin-top:2rem;">
+                    <h4 style="margin-top:0; color:#1E3A8A;"><i class="fas fa-lightbulb"></i> Key Insight</h4>
+                    <p style="margin-bottom:0;">
+                      Trustworthy Islamic-knowledge AI requires <strong>multi-dimensional evaluation</strong> that goes beyond accuracy metrics to include provenance verification, pluralism awareness, cultural sensitivity, and governance-oriented assessment. Standard NLP benchmarks are insufficient for high-stakes religious guidance applications.
+                    </p>
+                  </div>
+                </div>
+                <br><br>
+            </section>
+
+
+            <section id="challenges">
+                <h2><i class="fas fa-exclamation-circle"></i> Current Challenges & Future Directions</h2>
+                
+                <div class="wb-section">
+                  <p class="wb-lead">
+                    Despite significant progress, Islamic-knowledge AI faces critical challenges that require interdisciplinary solutions:
+                  </p>
+
+                  <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem; margin-top:2rem;">
+                    
+                    <article class="wb-card" style="background:#FEF2F2;">
+                      <h4><i class="fas fa-database"></i> Data Scarcity & Quality</h4>
+                      <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem;">
+                        <li>Limited annotated datasets for specialized tasks</li>
+                        <li>Web-scraped data mixes authoritative and unreliable sources</li>
+                        <li>Imbalanced coverage across languages and schools</li>
+                        <li><strong>Direction:</strong> Curated, multi-school, multilingual corpora</li>
+                      </ul>
+                    </article>
+
+                    <article class="wb-card" style="background:#FEF9C3;">
+                      <h4><i class="fas fa-brain"></i> Reasoning Complexity</h4>
+                      <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem;">
+                        <li>Jurisprudential reasoning requires multi-step inference</li>
+                        <li>Analogy (qiyās) and contextual interpretation</li>
+                        <li>Balancing general principles with specific rulings</li>
+                        <li><strong>Direction:</strong> Structured reasoning, chain-of-thought prompting</li>
+                      </ul>
+                    </article>
+
+                    <article class="wb-card" style="background:#ECFDF5;">
+                      <h4><i class="fas fa-users-cog"></i> Authority & Governance</h4>
+                      <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem;">
+                        <li>Who determines what counts as "correct" Islamic knowledge?</li>
+                        <li>How to represent scholarly disagreement fairly?</li>
+                        <li>Accountability mechanisms for AI-generated guidance</li>
+                        <li><strong>Direction:</strong> Scholar-in-the-loop systems, governance frameworks</li>
+                      </ul>
+                    </article>
+
+                    <article class="wb-card" style="background:#EFF6FF;">
+                      <h4><i class="fas fa-globe"></i> Cultural Flattening</h4>
+                      <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem;">
+                        <li>Western-centric models misrepresent Islamic values</li>
+                        <li>Tendency to overgeneralize diverse traditions</li>
+                        <li>Loss of local and contextual interpretations</li>
+                        <li><strong>Direction:</strong> Culturally grounded alignment, regional models</li>
+                      </ul>
+                    </article>
+
+                    <article class="wb-card" style="background:#F5F3FF;">
+                      <h4><i class="fas fa-exclamation-triangle"></i> Hallucination & Attribution</h4>
+                      <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem;">
+                        <li>LLMs fabricate Qur'anic verses and Hadith</li>
+                        <li>Incorrect attribution of rulings to scholars</li>
+                        <li>Confident presentation of ungrounded information</li>
+                        <li><strong>Direction:</strong> RAG, fact-checking layers, attribution tracking</li>
+                      </ul>
+                    </article>
+
+                    <article class="wb-card" style="background:#FFF7ED;">
+                      <h4><i class="fas fa-shield-check"></i> Safety & Deployment</h4>
+                      <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem;">
+                        <li>High-stakes guidance requires conservative strategies</li>
+                        <li>Need for abstention policies when uncertain</li>
+                        <li>Clear disclaimers about AI limitations</li>
+                        <li><strong>Direction:</strong> Calibrated confidence, deferral mechanisms</li>
+                      </ul>
+                    </article>
+
+                  </div>
+
+                  <br>
+                  <div style="background:#DCFCE7; border-left:4px solid #10B981; padding:1.5rem; border-radius:8px; margin-top:2rem;">
+                    <h4 style="margin-top:0; color:#064E3B;"><i class="fas fa-arrow-right"></i> Path Forward</h4>
+                    <p style="margin-bottom:0.5rem;">Building trustworthy Islamic-knowledge AI requires:</p>
+                    <ul style="margin:0; padding-left:1.5rem;">
+                      <li><strong>Interdisciplinary collaboration:</strong> AI researchers, Islamic scholars, community stakeholders</li>
+                      <li><strong>Infrastructure investment:</strong> High-quality datasets, evaluation benchmarks, deployment frameworks</li>
+                      <li><strong>Transparency & governance:</strong> Clear documentation of training data, evaluation criteria, and limitations</li>
+                      <li><strong>Community engagement:</strong> Participatory design, user feedback, cultural validation</li>
+                      <li><strong>Ethical guidelines:</strong> Responsible development, deployment safeguards, accountability mechanisms</li>
+                    </ul>
+                  </div>
+                </div>
+                <br><br>
+            </section>
+
+
+            <style>
+            #definition .wb-bridge {
+              font-size: 1rem;
+              line-height: 1.7;
+              color: #374151;
+              margin: 1rem 0 .75rem;
+            }
+            #definition .wb-grid-4 {
+              display: grid;
+              grid-template-columns: repeat(4, minmax(0, 1fr));
+              gap: 1.25rem;
+              margin-top: .5rem;
+            }
+            @media (max-width: 1200px) {
+              #definition .wb-grid-4 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            }
+            @media (max-width: 1024px) {
+              #definition .wb-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            }
+            @media (max-width: 640px) {
+              #definition .wb-grid-4 { grid-template-columns: 1fr; }
+            }
+            #definition .wb-card h4 {
+              display: flex; align-items: center; gap: .5rem;
+              font-size: 1rem; margin: 0 0 .35rem;
+            }
+            #definition .wb-card p.small {
+              margin: .35rem 0; color: #4b5563; line-height: 1.6;
+            }
+          </style>
+
+            <footer class="wb-footer">
+              <br>
+              <div class="wb-footer-content">
+                <p>
+                  <strong>Advances in AI Systems on Islamic Knowledge Capabilities: A Critical Survey</strong>
+                </p>
+                <p>
+                  A systematic review of 160 papers (1994-2025) on Islamic knowledge in ML/AI systems
+                </p>
+                <p style="margin-top:1rem;">
+                  This website is licensed under a
+                  <a href="https://creativecommons.org/licenses/by-sa/4.0/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Creative Commons Attribution-ShareAlike 4.0 International License
+                  </a>
+                </p>
+                <p>
+                  © 2025. All Rights Reserved
+                </p>
+              </div>
+              <br>
+            </footer>
+    </body>
+</html>

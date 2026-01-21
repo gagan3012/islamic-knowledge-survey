@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Papers - AI Systems on Islamic Knowledge Survey</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Comprehensive collection of papers on AI systems for Islamic knowledge - from the systematic survey.">
+        <meta name="keywords" content="Islamic AI, Islamic Knowledge, NLP, Machine Learning, LLM Alignment, Qur'an, Hadith, Fiqh, Islamic Studies, AI Ethics">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="./static/css/style.css">
+        <link rel="stylesheet" href="./static/css/papers-page.css">
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
+    </head>
+    
+    <body>
+        <!-- Navigation -->
+        <nav class="papers-nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-brand">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Survey
+                </a>
+                <h1 class="nav-title">Papers Collection</h1>
+                <div class="nav-stats">
+                    <span id="paper-count">0</span> papers
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Search and Filters -->
+        <div class="filters-section">
+            <div class="filters-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Search papers by title, author, abstract...">
+                </div>
+                
+                <div class="filter-group">
+                    <label>Pillar:</label>
+                    <select id="filter-pillar">
+                        <option value="">All Pillars</option>
+                        <option value="Foundations">Foundations</option>
+                        <option value="Disciplines">Disciplines (Ulum)</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Domain:</label>
+                    <select id="filter-domain">
+                        <option value="">All Domains</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Task:</label>
+                    <select id="filter-topic">
+                        <option value="">All Tasks</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Year:</label>
+                    <select id="filter-year">
+                        <option value="">All Years</option>
+                    </select>
+                </div>
+                
+                <button id="clear-filters" class="clear-btn">
+                    <i class="fas fa-times"></i>
+                    Clear Filters
+                </button>
+            </div>
+        </div>
+        
+        <!-- Papers Grid -->
+        <main class="papers-main">
+            <div id="papers-container" class="papers-grid">
+                <!-- Papers will be loaded here dynamically -->
+            </div>
+            
+            <div id="no-results" class="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h2>No papers found</h2>
+                <p>Try adjusting your search or filters</p>
+            </div>
+        </main>
+        
+        <!-- Paper Detail Modal -->
+        <div id="paper-modal" class="paper-modal">
+            <div class="paper-modal-content">
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div id="modal-body">
+                    <!-- Paper details will be loaded here -->
+                </div>
+            </div>
+        </div>
+        
+        <footer class="papers-footer">
+            <p>Part of the <a href="index.html">AI Systems on Islamic Knowledge Survey</a></p>
+        </footer>
+        
+        <script src="./static/js/papers-database.js"></script>
+        <script src="./static/js/papers-page.js"></script>
+    </body>
+</html>
