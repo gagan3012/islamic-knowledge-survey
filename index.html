@@ -134,6 +134,31 @@
 
 
 
+            <!-- Abstract -->
+            <section id="abstract">
+              <div class="wb-section">
+                <h2 style="font-size:2rem; margin-bottom:1.5rem; color:#1F2937; border-bottom:3px solid #6366F1; padding-bottom:0.75rem; display:inline-block;">
+                  <i class="fas fa-file-alt" style="color:#6366F1;"></i> Abstract
+                </h2>
+                <div class="wb-hr"></div>
+                <div style="background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%); border-left: 4px solid #6366F1; padding: 1.75rem; border-radius: 8px; margin: 1.5rem 0; font-size: 1.05rem; line-height: 1.8; color: #1E293B;">
+                  <p style="margin:0 0 1rem;">
+                    AI systems are increasingly mediating how Islamic communities access, study, and apply Islamic sources; still, research on Islamic-knowledge capabilities remains fragmented across NLP, information retrieval, speech, multimodal learning, educational technology, and recent LLM alignment work.
+                  </p>
+                  <p style="margin:0 0 1rem;">
+                    This survey presents a <strong>critical systematic review of 160+ papers from the past decade</strong> that incorporate Islamic knowledge in Machine Learning/AI. We propose a <strong>layered taxonomy</strong> that separates an <em>epistemic</em> view of Islamic knowledge (authority-bearing foundations and established disciplines) from an <em>instrumental</em> AI task layer (data and corpora, retrieval and grounding, understanding, reasoning support, evaluation and governance, and multimodal methods), while treating normative concerns as cross-cutting constraints.
+                  </p>
+                  <p style="margin:0 0 1rem;">
+                    Using this framework, we synthesize trends in datasets, benchmarks, and system architectures, highlighting the shift toward <strong>retrieval-grounded LLM pipelines</strong>, verification and deferral mechanisms, and emerging multimodal recitation and manuscript-processing systems.
+                  </p>
+                  <p style="margin:0;">
+                    We also consolidate evaluation practices for trustworthiness, including <strong>provenance and faithfulness</strong>, disagreement-aware and school-of-thought-sensitive framing, calibrated abstention under underspecified queries, and safety and bias assessment for Islamic contexts. Finally, we identify deployment-critical gaps and engineering priorities for building <strong>auditable, pluralism-aware, and risk-sensitive</strong> Islamic-knowledge AI.
+                  </p>
+                </div>
+              </div>
+              <br><br>
+            </section>
+
             <section id="introduction">
               <div class="wb-section">
                 <h2 style="font-size:2rem; margin-bottom:1.5rem; color:#1F2937; border-bottom:3px solid #3B82F6; padding-bottom:0.75rem; display:inline-block;">
@@ -142,10 +167,10 @@
                 <div class="wb-hr"></div>
 
                 <p class="wb-lead">
-                  Islam-related content is growing at an unprecedented pace to address the needs of over 2 billion people worldwide. AI systems are playing an increasingly central role in shaping how this content is accessed, understood, and applied.
+                  AI systems are increasingly mediating how Islamic communities access, study, and apply Islamic sources. With over <strong>2 billion Muslims worldwide</strong>, the demand for reliable, culturally grounded AI tools for Islamic knowledge has never been greater. Yet research on Islamic-knowledge capabilities remains fragmented across NLP, information retrieval, speech processing, multimodal learning, educational technology, and LLM alignment.
                 </p>
                 <p class="wb-lead">
-                  This systematic survey reviews over <strong>160 papers</strong> from the last decade that incorporate Islamic knowledge in ML/AI systems, spanning NLP, IR, speech processing, educational technology, and LLM alignment.
+                  This systematic survey reviews over <strong>160 papers</strong> from the past decade (2016&ndash;2026), presenting a critical analysis of how AI systems operationalize Islamic knowledge. We follow the <strong>PRISMA-ScR</strong> framework to ensure transparency and reproducibility, screening 1,743 initial records down to 160 included studies.
                 </p>
 
                 <figure style="width: 100%; max-width: 900px; display: block; margin: 32px auto;">
@@ -154,10 +179,13 @@
                 </figure>
 
                 <p class="wb-lead">
-                  We introduce a <strong>multi-dimensional taxonomy</strong> that links normative lenses (Creed/Aqīdah, Jurisprudence/Fiqh, Ethics/Akhlāq, Objectives/Maqāṣid) with content domains spanning Qur'an and Hadith studies, fiqh and fatwa QA, Islamic education, and classical heritage digitization.
+                  We introduce a <strong>layered taxonomy</strong> that separates an <em>epistemic</em> view of Islamic knowledge&mdash;authority-bearing foundations (Qur'an, Hadith) and established disciplines (Qur'anic Sciences, Hadith Sciences, Usul al-Fiqh, Fiqh, Theology, Sufism, and History)&mdash;from an <em>instrumental</em> AI task layer covering data and corpora, retrieval and grounding, understanding, reasoning support, evaluation and governance, and multimodal methods.
                 </p>
                 <p class="wb-lead">
-                  Our goal is to provide a comprehensive view of how current AI systems capture, structure, and evaluate Islamic knowledge—identifying where they resonate with scholarly practice and where they risk flattening diverse traditions and worldviews.
+                  Three cross-cutting <strong>normative dimensions</strong> thread through the entire analysis: (i) <em>doctrinal integrity and authenticity</em> (correct attribution, protection against fabrication), (ii) <em>normative correctness and disagreement handling</em> (school-aware framing, calibrated abstention), and (iii) <em>objectives, harms, and governance</em> (maqasid-informed alignment, bias checking, deployment safety).
+                </p>
+                <p class="wb-lead">
+                  Our goal is to provide a comprehensive view of how current AI systems capture, structure, and evaluate Islamic knowledge&mdash;identifying where they resonate with scholarly practice and where they risk flattening diverse traditions and worldviews.
                 </p>
 
                 <h3 style="margin-top:3rem; margin-bottom:1.5rem; text-align:center;"><i class="fas fa-history"></i> Comparison with Prior Surveys</h3>
@@ -315,6 +343,7 @@
               <h2 style="font-size:2rem; margin-bottom:1.5rem; color:#1F2937; border-bottom:3px solid #10B981; padding-bottom:0.75rem; display:inline-block;">
                 <i class="fas fa-search" style="color:#10B981;"></i> Scope & Methodology
               </h2>
+              <div class="wb-hr"></div>
 
               <style>
                 #scope .wb-grid{
@@ -360,7 +389,7 @@
                   </article>
 
                   <article class="wb-card">
-                    <h4><strong>Coverage:</strong> 1994-2025</h4>
+                    <h4><strong>Coverage:</strong> 2016-2026</h4>
                     <p>Systematic search across Semantic Scholar, IEEE Xplore, ACM Digital Library, ACL Anthology, and arXiv. Initial corpus: 1,743 papers → 160 included after screening.</p>
                   </article>
                 </div>
@@ -377,10 +406,33 @@
               <h2 style="font-size:2rem; margin-bottom:1.5rem; color:#1F2937; border-bottom:3px solid #F59E0B; padding-bottom:0.75rem; display:inline-block;">
                 <i class="fas fa-sitemap" style="color:#F59E0B;"></i> Multi-Dimensional Taxonomy
               </h2>
+              <div class="wb-hr"></div>
               <div class="wb-section">
                 <p class="wb-lead">
-                  We developed a comprehensive taxonomy that bridges traditional Islamic sciences with modern LLM evaluation. This framework links knowledge domains, computational task families, and cross-cutting normative lenses.
+                  We developed a comprehensive <strong>two-layer taxonomy</strong> that bridges traditional Islamic sciences with modern AI evaluation. The <em>epistemic layer</em> organizes Islamic knowledge to prevent a common failure mode&mdash;treating all "Islamic text" as homogeneous content&mdash;by distinguishing sources that carry direct normative authority from disciplines that regulate how those sources are read, reconciled, and applied. The <em>AI task layer</em> is explicitly instrumental, enumerating reusable computational capabilities (retrieval, grounding, extraction, reasoning, evaluation) that apply across domains.
                 </p>
+
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem; margin:2rem 0;">
+                  <div style="background:linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%); border-left:4px solid #059669; padding:1.5rem; border-radius:8px;">
+                    <h4 style="margin:0 0 0.75rem; color:#064E3B;"><i class="fas fa-book-open"></i> Epistemic Layer: Foundations</h4>
+                    <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem; line-height:1.7;">
+                      <li><strong>Qur'an:</strong> The revealed text and primary foundation of all Islamic disciplines. Motivates high-integrity representations, verse-boundary integrity, and script normalization.</li>
+                      <li><strong>Hadith:</strong> Textual corpora of the Prophet's sayings, actions, and tacit approvals. Motivates collection-aware retrieval, attribution, and separation of transmitted reports from commentary.</li>
+                    </ul>
+                  </div>
+                  <div style="background:linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); border-left:4px solid #3B82F6; padding:1.5rem; border-radius:8px;">
+                    <h4 style="margin:0 0 0.75rem; color:#1E3A8A;"><i class="fas fa-university"></i> Epistemic Layer: Disciplines</h4>
+                    <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem; line-height:1.7;">
+                      <li><strong>Qur'anic Sciences:</strong> Preservation, recitation (qira'at), interpretation, tafsir alignment</li>
+                      <li><strong>Hadith Sciences:</strong> Isnad analysis, narrator evaluation, authenticity classification</li>
+                      <li><strong>Usul al-Fiqh:</strong> Legal theory, evidential hierarchy, structured inference</li>
+                      <li><strong>Fiqh:</strong> Practical rulings, comparative school retrieval, disagreement handling</li>
+                      <li><strong>Theology (Kalam):</strong> Doctrinal integrity, grounding claims in sources</li>
+                      <li><strong>Sufism (Tasawwuf):</strong> Genre-sensitive summarization, tone-aware guidance</li>
+                      <li><strong>History & Sirah:</strong> Event extraction, geo-temporal linking, provenance-aware summarization</li>
+                    </ul>
+                  </div>
+                </div>
                 
                 <h3 style="margin-top:2rem; margin-bottom:1rem; text-align:center;">
                   <i class="fas fa-project-diagram"></i> Interactive Survey Organization & Taxonomy Framework
@@ -571,6 +623,34 @@
             <section id="use-cases" style="margin:3.5rem 0;">
               <div class="wb-section">
 
+                <h3 style="margin-top:1.5rem; margin-bottom:1rem; text-align:center;"><i class="fas fa-cogs"></i> AI Task Layer (Instrumental Methods)</h3>
+                <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; margin:1.5rem 0;">
+                  <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1.25rem;">
+                    <h4 style="margin:0 0 0.5rem; color:#1F2937; font-size:1rem;"><i class="fas fa-database" style="color:#6366F1;"></i> Data & Corpora</h4>
+                    <p style="margin:0; font-size:0.9rem; color:#4B5563; line-height:1.6;">Digitisation (OCR/HTR for manuscripts), corpus building, annotation schema design, versioning for provenance and reproducibility.</p>
+                  </div>
+                  <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1.25rem;">
+                    <h4 style="margin:0 0 0.5rem; color:#1F2937; font-size:1rem;"><i class="fas fa-link" style="color:#10B981;"></i> Retrieval & Grounding</h4>
+                    <p style="margin:0; font-size:0.9rem; color:#4B5563; line-height:1.6;">Search/IR with cross-lingual support, RAG and evidence linking, provenance tracking, citation generation, quote-bounded answering.</p>
+                  </div>
+                  <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1.25rem;">
+                    <h4 style="margin:0 0 0.5rem; color:#1F2937; font-size:1rem;"><i class="fas fa-brain" style="color:#F59E0B;"></i> Understanding</h4>
+                    <p style="margin:0; font-size:0.9rem; color:#4B5563; line-height:1.6;">NER, relation/event extraction, geo-temporal linking, faithful summarisation, and multi-source synthesis that surfaces disagreements.</p>
+                  </div>
+                  <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1.25rem;">
+                    <h4 style="margin:0 0 0.5rem; color:#1F2937; font-size:1rem;"><i class="fas fa-balance-scale" style="color:#8B5CF6;"></i> Reasoning Support</h4>
+                    <p style="margin:0; font-size:0.9rem; color:#4B5563; line-height:1.6;">Comparative (madhhab-aware, ikhtilaf surfacing), uncertainty handling (abstention/deferral, clarification prompts).</p>
+                  </div>
+                  <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1.25rem;">
+                    <h4 style="margin:0 0 0.5rem; color:#1F2937; font-size:1rem;"><i class="fas fa-shield-alt" style="color:#EF4444;"></i> Evaluation & Governance</h4>
+                    <p style="margin:0; font-size:0.9rem; color:#4B5563; line-height:1.6;">Benchmarks, error taxonomies, reproducibility, hallucination control, fabrication detection, bias checks, and red-teaming assessment.</p>
+                  </div>
+                  <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1.25rem;">
+                    <h4 style="margin:0 0 0.5rem; color:#1F2937; font-size:1rem;"><i class="fas fa-photo-video" style="color:#DC2626;"></i> Multimodal</h4>
+                    <p style="margin:0; font-size:0.9rem; color:#4B5563; line-height:1.6;">Speech/audio (ASR, tajwid, recitation coaching), document image processing (manuscript OCR/HTR, layout analysis, segmentation).</p>
+                  </div>
+                </div>
+
                 <p class="wb-lead">
                   Islamic-knowledge AI is deployed in recurring settings that stress different reliability constraints:
                 </p>
@@ -669,13 +749,18 @@
                 </p>
 
               </div>
-              <br>
+              <br><br>
+            </section>
+
+            </div>
             </section>
 
 
-
             <section id="resources">
-                <h2><i class="fas fa-database"></i> Resources & Benchmarks</h2>
+                <h2 style="font-size:2rem; margin-bottom:1.5rem; color:#1F2937; border-bottom:3px solid #8B5CF6; padding-bottom:0.75rem; display:inline-block;">
+                  <i class="fas fa-database" style="color:#8B5CF6;"></i> Resources & Benchmarks
+                </h2>
+                <div class="wb-hr"></div>
                 
                 <div class="wb-section">
                   <p class="wb-lead">
@@ -975,7 +1060,10 @@
 
 
             <section id="evaluation">
-                <h2><i class="fas fa-check-circle"></i> Evaluation & Trustworthiness</h2>
+                <h2 style="font-size:2rem; margin-bottom:1.5rem; color:#1F2937; border-bottom:3px solid #EF4444; padding-bottom:0.75rem; display:inline-block;">
+                  <i class="fas fa-check-circle" style="color:#EF4444;"></i> Evaluation & Trustworthiness
+                </h2>
+                <div class="wb-hr"></div>
                 
                 <div class="wb-section">
                   <p class="wb-lead">
@@ -1140,12 +1228,77 @@
             </section>
 
 
-            <section id="challenges">
-                <h2><i class="fas fa-exclamation-circle"></i> Current Challenges & Future Directions</h2>
+            <!-- Methods Evolution Section -->
+            <section id="methods">
+                <h2 style="font-size:2rem; margin-bottom:1.5rem; color:#1F2937; border-bottom:3px solid #06B6D4; padding-bottom:0.75rem; display:inline-block;">
+                  <i class="fas fa-code-branch" style="color:#06B6D4;"></i> Evolution of Methods
+                </h2>
+                <div class="wb-hr"></div>
                 
                 <div class="wb-section">
                   <p class="wb-lead">
-                    Despite significant progress, Islamic-knowledge AI faces critical challenges that require interdisciplinary solutions:
+                    Methods for operationalizing Islamic knowledge in AI have evolved through <strong>three overlapping eras</strong>. The LLM era does not replace earlier techniques so much as subsume them&mdash;lexical retrieval and symbolic resources reappear inside RAG and verification pipelines.
+                  </p>
+
+                  <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1.5rem; margin:2rem 0;">
+                    <!-- Phase 1 -->
+                    <div style="background:linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border-radius:12px; padding:1.75rem; border-top:4px solid #D97706;">
+                      <h4 style="margin:0 0 0.5rem; color:#78350F; font-size:1.1rem;">Phase 1: ~2000&ndash;2017</h4>
+                      <p style="font-size:0.85rem; color:#92400E; font-weight:600; margin:0 0 1rem;">Pre-Transformer & Early Neural</p>
+                      <ul style="margin:0; padding-left:1.2rem; font-size:0.9rem; line-height:1.7; color:#78350F;">
+                        <li><strong>Preprocessing:</strong> Rule-based stemmers (Khoja, ISRI)</li>
+                        <li><strong>Representation:</strong> Bag-of-words, TF-IDF, static embeddings (AraVec)</li>
+                        <li><strong>Models:</strong> BM25 retrieval, SVM/CRF classifiers, KG for Qur'an/Hadith</li>
+                        <li><strong>Limitations:</strong> Limited context for theological nuance, no long-range reasoning</li>
+                      </ul>
+                    </div>
+                    <!-- Phase 2 -->
+                    <div style="background:linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%); border-radius:12px; padding:1.75rem; border-top:4px solid #3B82F6;">
+                      <h4 style="margin:0 0 0.5rem; color:#1E3A8A; font-size:1.1rem;">Phase 2: ~2018&ndash;2022</h4>
+                      <p style="font-size:0.85rem; color:#1D4ED8; font-weight:600; margin:0 0 1rem;">Neural Encoders & Arabic LMs</p>
+                      <ul style="margin:0; padding-left:1.2rem; font-size:0.9rem; line-height:1.7; color:#1E3A8A;">
+                        <li><strong>Preprocessing:</strong> Diacritic restoration, Ayah/Hadith segmentation</li>
+                        <li><strong>Representation:</strong> Contextual encoders (AraBERT, MARBERT, CAMeLBERT)</li>
+                        <li><strong>Models:</strong> Neural retrieval, LSTM/BiLSTM, QA over Qur'an/Hadith</li>
+                        <li><strong>Advance:</strong> Improved semantic search and task-specific classification</li>
+                      </ul>
+                    </div>
+                    <!-- Phase 3 -->
+                    <div style="background:linear-gradient(135deg, #DCFCE7 0%, #BBF7D0 100%); border-radius:12px; padding:1.75rem; border-top:4px solid #059669;">
+                      <h4 style="margin:0 0 0.5rem; color:#064E3B; font-size:1.1rem;">Phase 3: ~2023&ndash;Present</h4>
+                      <p style="font-size:0.85rem; color:#047857; font-weight:600; margin:0 0 1rem;">Generative LLMs, RAG & Agentic Pipelines</p>
+                      <ul style="margin:0; padding-left:1.2rem; font-size:0.9rem; line-height:1.7; color:#064E3B;">
+                        <li><strong>Native Arabic LLMs:</strong> Jais, ArabianGPT, ALLaM</li>
+                        <li><strong>Adapted models:</strong> AceGPT, Fanar, Yehia (CPT/SFT)</li>
+                        <li><strong>Pipelines:</strong> Multi-step agents for inheritance, zakat, Hajj workflows</li>
+                        <li><strong>Safeguards:</strong> Chain-of-thought citation answers, Islamic safety policies, bias checks, benchmark-driven evaluation</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div style="background:#F3F4F6; border-left:4px solid #6B7280; padding:1.5rem; border-radius:8px; margin-top:1.5rem;">
+                    <h4 style="margin-top:0; color:#1F2937;"><i class="fas fa-lightbulb"></i> Key Architectural Trends</h4>
+                    <ul style="margin:0; padding-left:1.5rem; line-height:1.8;">
+                      <li><strong>Retrieval-Augmented Generation (RAG):</strong> Grounding LLM outputs in Qur'anic verses, Hadith, and Fiqh texts to reduce hallucination and enable verifiable attribution.</li>
+                      <li><strong>Agentic Pipelines:</strong> Multi-step workflows where specialized sub-agents handle retrieval, reasoning, and verification separately (e.g., inheritance calculation, Hajj guidance).</li>
+                      <li><strong>Alignment & Safety Layers:</strong> Islamic-specific safety policies, deferral mechanisms for underspecified queries, and red-teaming protocols for religious content.</li>
+                      <li><strong>Multimodal Expansion:</strong> Quranic recitation coaching (mispronunciation detection, tajwid), manuscript OCR/HTR, and Arabic sign language recognition.</li>
+                    </ul>
+                  </div>
+                </div>
+                <br><br>
+            </section>
+
+
+            <section id="challenges">
+                <h2 style="font-size:2rem; margin-bottom:1.5rem; color:#1F2937; border-bottom:3px solid #F97316; padding-bottom:0.75rem; display:inline-block;">
+                  <i class="fas fa-exclamation-circle" style="color:#F97316;"></i> Current Challenges & Future Directions
+                </h2>
+                <div class="wb-hr"></div>
+                
+                <div class="wb-section">
+                  <p class="wb-lead">
+                    Despite significant progress, Islamic-knowledge AI faces critical challenges that require interdisciplinary solutions. Our survey identifies six deployment-critical gaps and engineering priorities:
                   </p>
 
                   <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem; margin-top:2rem;">
@@ -1155,58 +1308,59 @@
                       <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem;">
                         <li>Limited annotated datasets for specialized tasks</li>
                         <li>Web-scraped data mixes authoritative and unreliable sources</li>
-                        <li>Imbalanced coverage across languages and schools</li>
-                        <li><strong>Direction:</strong> Curated, multi-school, multilingual corpora</li>
+                        <li>Imbalanced coverage across languages and schools of thought</li>
+                        <li>Most resources Arabic-centric; low-resource Muslim-majority languages underserved</li>
+                        <li><strong>Direction:</strong> Curated, multi-school, multilingual corpora with provenance metadata</li>
                       </ul>
                     </article>
 
                     <article class="wb-card" style="background:#FEF9C3;">
                       <h4><i class="fas fa-brain"></i> Reasoning Complexity</h4>
                       <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem;">
-                        <li>Jurisprudential reasoning requires multi-step inference</li>
-                        <li>Analogy (qiyās) and contextual interpretation</li>
-                        <li>Balancing general principles with specific rulings</li>
-                        <li><strong>Direction:</strong> Structured reasoning, chain-of-thought prompting</li>
+                        <li>Jurisprudential reasoning requires multi-step inference with evidential hierarchy</li>
+                        <li>Analogy (qiyas), contextual interpretation, and conditions of application</li>
+                        <li>Inheritance-law calculation demands mathematical logic + legal reasoning</li>
+                        <li><strong>Direction:</strong> Structured reasoning, chain-of-thought prompting, symbolic verification engines</li>
                       </ul>
                     </article>
 
                     <article class="wb-card" style="background:#ECFDF5;">
-                      <h4><i class="fas fa-users-cog"></i> Authority & Governance</h4>
+                      <h4><i class="fas fa-users-cog"></i> Disagreement & Pluralism</h4>
                       <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem;">
-                        <li>Who determines what counts as "correct" Islamic knowledge?</li>
-                        <li>How to represent scholarly disagreement fairly?</li>
-                        <li>Accountability mechanisms for AI-generated guidance</li>
-                        <li><strong>Direction:</strong> Scholar-in-the-loop systems, governance frameworks</li>
+                        <li>Systems flatten legitimate scholarly disagreement (ikhtilaf) into single answers</li>
+                        <li>Madhahib-aware presentation needed to avoid "one true answer" bias</li>
+                        <li>Context-sensitive questioning when inputs are underspecified</li>
+                        <li><strong>Direction:</strong> Disagrement-aware scoring, school-of-thought-sensitive framing, safe deferral</li>
                       </ul>
                     </article>
 
                     <article class="wb-card" style="background:#EFF6FF;">
-                      <h4><i class="fas fa-globe"></i> Cultural Flattening</h4>
+                      <h4><i class="fas fa-globe"></i> Cultural Flattening & Bias</h4>
                       <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem;">
-                        <li>Western-centric models misrepresent Islamic values</li>
-                        <li>Tendency to overgeneralize diverse traditions</li>
-                        <li>Loss of local and contextual interpretations</li>
-                        <li><strong>Direction:</strong> Culturally grounded alignment, regional models</li>
+                        <li>Western-centric RLHF policies misrepresent Islamic values</li>
+                        <li>Models trained on web text encode stereotypes about Muslims</li>
+                        <li>Loss of local, contextual, and dialectal interpretations</li>
+                        <li><strong>Direction:</strong> Culturally grounded alignment, regional models, community-participatory design</li>
                       </ul>
                     </article>
 
                     <article class="wb-card" style="background:#F5F3FF;">
-                      <h4><i class="fas fa-exclamation-triangle"></i> Hallucination & Attribution</h4>
+                      <h4><i class="fas fa-exclamation-triangle"></i> Hallucination & Fabrication</h4>
                       <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem;">
-                        <li>LLMs fabricate Qur'anic verses and Hadith</li>
-                        <li>Incorrect attribution of rulings to scholars</li>
-                        <li>Confident presentation of ungrounded information</li>
-                        <li><strong>Direction:</strong> RAG, fact-checking layers, attribution tracking</li>
+                        <li>LLMs fabricate Qur'anic verses and Hadith with confident presentation</li>
+                        <li>Incorrect attribution of rulings to scholars or schools</li>
+                        <li>Fabricated citations are uniquely harmful in religious contexts</li>
+                        <li><strong>Direction:</strong> Retrieval-grounded generation, span-level fabrication detection, provenance-preserving pipelines</li>
                       </ul>
                     </article>
 
                     <article class="wb-card" style="background:#FFF7ED;">
-                      <h4><i class="fas fa-shield-check"></i> Safety & Deployment</h4>
+                      <h4><i class="fas fa-shield-alt"></i> Safety & Governance</h4>
                       <ul style="margin:0; padding-left:1.2rem; font-size:0.95rem;">
-                        <li>High-stakes guidance requires conservative strategies</li>
-                        <li>Need for abstention policies when uncertain</li>
-                        <li>Clear disclaimers about AI limitations</li>
-                        <li><strong>Direction:</strong> Calibrated confidence, deferral mechanisms</li>
+                        <li>High-stakes religious guidance requires conservative abstention strategies</li>
+                        <li>Need for scholar-in-the-loop validation and governance frameworks</li>
+                        <li>Red-teaming protocols tailored to religious harms (misattribution, offensive stereotyping)</li>
+                        <li><strong>Direction:</strong> Calibrated confidence, auditable systems, deferral-to-authority mechanisms</li>
                       </ul>
                     </article>
 
@@ -1214,14 +1368,15 @@
 
                   <br>
                   <div style="background:#DCFCE7; border-left:4px solid #10B981; padding:1.5rem; border-radius:8px; margin-top:2rem;">
-                    <h4 style="margin-top:0; color:#064E3B;"><i class="fas fa-arrow-right"></i> Path Forward</h4>
-                    <p style="margin-bottom:0.5rem;">Building trustworthy Islamic-knowledge AI requires:</p>
-                    <ul style="margin:0; padding-left:1.5rem;">
-                      <li><strong>Interdisciplinary collaboration:</strong> AI researchers, Islamic scholars, community stakeholders</li>
-                      <li><strong>Infrastructure investment:</strong> High-quality datasets, evaluation benchmarks, deployment frameworks</li>
-                      <li><strong>Transparency & governance:</strong> Clear documentation of training data, evaluation criteria, and limitations</li>
-                      <li><strong>Community engagement:</strong> Participatory design, user feedback, cultural validation</li>
-                      <li><strong>Ethical guidelines:</strong> Responsible development, deployment safeguards, accountability mechanisms</li>
+                    <h4 style="margin-top:0; color:#064E3B;"><i class="fas fa-arrow-right"></i> Engineering Priorities for the Path Forward</h4>
+                    <p style="margin-bottom:0.5rem;">Building auditable, pluralism-aware, and risk-sensitive Islamic-knowledge AI requires:</p>
+                    <ul style="margin:0; padding-left:1.5rem; line-height:1.8;">
+                      <li><strong>Provenance-preserving grounding:</strong> Retrieval-grounded pipelines with verifiable citations, not free-form synthesis</li>
+                      <li><strong>Disagreement-aware systems:</strong> Present alternative views with supporting evidence rather than collapsing into single answers</li>
+                      <li><strong>Calibrated abstention:</strong> Systems that defer, request missing context, or direct users to qualified authority when grounding is unreliable</li>
+                      <li><strong>Interdisciplinary collaboration:</strong> AI researchers, Islamic scholars ('ulama), and community stakeholders working together</li>
+                      <li><strong>Benchmark investment:</strong> Evaluation protocols that penalize fabricated citations more than generic factual errors, with disagreement-aware scoring</li>
+                      <li><strong>Safety-first deployment:</strong> Islamic-specific red-teaming, bias checks, and governance frameworks with clear disclaimers about AI limitations</li>
                     </ul>
                   </div>
                 </div>
@@ -1229,36 +1384,74 @@
             </section>
 
 
-            <style>
-            #definition .wb-bridge {
-              font-size: 1rem;
-              line-height: 1.7;
-              color: #374151;
-              margin: 1rem 0 .75rem;
-            }
-            #definition .wb-grid-4 {
-              display: grid;
-              grid-template-columns: repeat(4, minmax(0, 1fr));
-              gap: 1.25rem;
-              margin-top: .5rem;
-            }
-            @media (max-width: 1200px) {
-              #definition .wb-grid-4 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-            }
-            @media (max-width: 1024px) {
-              #definition .wb-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            }
-            @media (max-width: 640px) {
-              #definition .wb-grid-4 { grid-template-columns: 1fr; }
-            }
-            #definition .wb-card h4 {
-              display: flex; align-items: center; gap: .5rem;
-              font-size: 1rem; margin: 0 0 .35rem;
-            }
-            #definition .wb-card p.small {
-              margin: .35rem 0; color: #4b5563; line-height: 1.6;
-            }
-          </style>
+            <!-- Authors -->
+            <section id="authors">
+                <h2 style="font-size:2rem; margin-bottom:1.5rem; color:#1F2937; border-bottom:3px solid #6366F1; padding-bottom:0.75rem; display:inline-block;">
+                  <i class="fas fa-users" style="color:#6366F1;"></i> Authors
+                </h2>
+                <div class="wb-hr"></div>
+                <div class="wb-section">
+                  <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin:1.5rem 0;">
+                    <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1rem 1.5rem; text-align:center; min-width:180px;">
+                      <strong>Gagan Bhatia</strong><br><span style="font-size:0.85rem; color:#6B7280;">QCRI, HBKU Qatar</span>
+                    </div>
+                    <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1rem 1.5rem; text-align:center; min-width:180px;">
+                      <strong>Hamdy Mubarak</strong><br><span style="font-size:0.85rem; color:#6B7280;">QCRI, HBKU Qatar</span>
+                    </div>
+                    <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1rem 1.5rem; text-align:center; min-width:180px;">
+                      <strong>Majd Hawasly</strong><br><span style="font-size:0.85rem; color:#6B7280;">QCRI, HBKU Qatar</span>
+                    </div>
+                    <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1rem 1.5rem; text-align:center; min-width:180px;">
+                      <strong>Mustafa Jarrar</strong><br><span style="font-size:0.85rem; color:#6B7280;">CHSS, HBKU Qatar</span>
+                    </div>
+                    <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1rem 1.5rem; text-align:center; min-width:180px;">
+                      <strong>George Mikros</strong><br><span style="font-size:0.85rem; color:#6B7280;">CHSS, HBKU Qatar</span>
+                    </div>
+                    <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1rem 1.5rem; text-align:center; min-width:180px;">
+                      <strong>Fadi Zaraket</strong><br><span style="font-size:0.85rem; color:#6B7280;">ACRPS Qatar</span>
+                    </div>
+                    <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1rem 1.5rem; text-align:center; min-width:180px;">
+                      <strong>Mahmoud Alhirthani</strong><br><span style="font-size:0.85rem; color:#6B7280;">CHSS, HBKU Qatar</span>
+                    </div>
+                    <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1rem 1.5rem; text-align:center; min-width:180px;">
+                      <strong>Mutaz Al-Khatib</strong><br><span style="font-size:0.85rem; color:#6B7280;">CIS, HBKU Qatar</span>
+                    </div>
+                    <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1rem 1.5rem; text-align:center; min-width:180px;">
+                      <strong>Logan Cochrane</strong><br><span style="font-size:0.85rem; color:#6B7280;">CPP, HBKU Qatar</span>
+                    </div>
+                    <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1rem 1.5rem; text-align:center; min-width:180px;">
+                      <strong>Kareem Darwish</strong><br><span style="font-size:0.85rem; color:#6B7280;">QCRI, HBKU Qatar</span>
+                    </div>
+                    <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1rem 1.5rem; text-align:center; min-width:180px;">
+                      <strong>Rashid Yahiaoui</strong><br><span style="font-size:0.85rem; color:#6B7280;">CHSS, HBKU Qatar</span>
+                    </div>
+                    <div style="background:#F9FAFB; border:1px solid #E5E7EB; border-radius:8px; padding:1rem 1.5rem; text-align:center; min-width:180px;">
+                      <strong>Firoj Alam</strong><br><span style="font-size:0.85rem; color:#6B7280;">QCRI, HBKU Qatar</span>
+                    </div>
+                  </div>
+                  <p style="text-align:center; font-size:0.9rem; color:#6B7280;">Contact: <a href="mailto:fialam@hbku.edu.qa" style="color:#3B82F6;">fialam@hbku.edu.qa</a></p>
+                </div>
+                <br><br>
+            </section>
+
+            <!-- Citation -->
+            <section id="citation">
+                <h2 style="font-size:2rem; margin-bottom:1.5rem; color:#1F2937; border-bottom:3px solid #6B7280; padding-bottom:0.75rem; display:inline-block;">
+                  <i class="fas fa-quote-left" style="color:#6B7280;"></i> Citation
+                </h2>
+                <div class="wb-hr"></div>
+                <div class="wb-section">
+                  <pre style="background:#1F2937; color:#E5E7EB; padding:1.5rem; border-radius:8px; font-size:0.85rem; overflow-x:auto; line-height:1.6;">@article{bhatia2026islamic,
+  title={Advances in AI Systems on Islamic Knowledge Capabilities: A Critical Survey},
+  author={Bhatia, Gagan and Mubarak, Hamdy and Hawasly, Majd and Jarrar, Mustafa and 
+          Mikros, George and Zaraket, Fadi and Alhirthani, Mahmoud and Al-Khatib, Mutaz and 
+          Cochrane, Logan and Darwish, Kareem and Yahiaoui, Rashid and Alam, Firoj},
+  year={2026},
+  institution={Qatar Computing Research Institute, HBKU}
+}</pre>
+                </div>
+                <br><br>
+            </section>
 
             <footer class="wb-footer">
               <br>
@@ -1267,7 +1460,10 @@
                   <strong>Advances in AI Systems on Islamic Knowledge Capabilities: A Critical Survey</strong>
                 </p>
                 <p>
-                  A systematic review of 160 papers (1994-2025) on Islamic knowledge in ML/AI systems
+                  A systematic review of 160+ papers (2016&ndash;2026) on Islamic knowledge in ML/AI systems
+                </p>
+                <p style="margin-top:0.5rem; font-size:0.9em;">
+                  Qatar Computing Research Institute (QCRI), Hamad Bin Khalifa University (HBKU), Qatar
                 </p>
                 <p style="margin-top:1rem;">
                   This website is licensed under a
@@ -1278,7 +1474,7 @@
                   </a>
                 </p>
                 <p>
-                  © 2025. All Rights Reserved
+                  &copy; 2026. All Rights Reserved
                 </p>
               </div>
               <br>
